@@ -42,6 +42,8 @@ For configuring the service the appsettings.json has four relevant options:
 5. PowerPlanBattery: the power plan to be set when the laptop is working on battery (EfficiencyMode | IntelligentCooling | ExtremePerformance, default: EfficiencyMode).
 6. CheckIntervalSeconds (integer): this service works by checking the battery level, you can set the amount of seconds to adjust the frequency of checking (default 60). 
 
+The configuration is read again each time the service loop runs, so you don't need to restart or do anything else other than saving the text file for the updated settings to take place.
+
 ## Known Issues
 
 1. As this is a windows service and not an integrated hardware solution it won't work while Windows is asleep or computer is shutdown.
