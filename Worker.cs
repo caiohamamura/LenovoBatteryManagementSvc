@@ -26,6 +26,7 @@ public class WindowsBackgroundService : IHostedService
         {
             var confBuilder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
             Dictionary<string, PowerPlan> dictPower = new () {
+                {"None", PowerPlan.None},
                 {"IntelligentCooling", PowerPlan.IntelligentCooling},
                 {"EfficiencyMode", PowerPlan.EfficiencyMode},
                 {"ExtremePerformance", PowerPlan.ExtremePerformance},
