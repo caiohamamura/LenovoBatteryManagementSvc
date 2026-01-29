@@ -86,11 +86,11 @@ PowerPlanPower: {powerPlanPower}");
                     loginfo(ChargingMode.Conservation);
                 }
 
-                if (_battery.BatteryStatus == 1 && _service.GetPowerPlan() != powerPlanBattery)
+                if (_battery.BatteryStatus == 1 && powerPlanBattery != 0 && _service.GetPowerPlan() != powerPlanBattery)
                 {
                     _service.SetPowerPlan(powerPlanBattery);
                     logInfoPp(powerPlanBattery);
-                } else if (_battery.BatteryStatus == 2 && _service.GetPowerPlan() != powerPlanPower)
+                } else if (_battery.BatteryStatus == 2 && powerPlanPower != 0 && _service.GetPowerPlan() != powerPlanPower)
                 {
                     _service.SetPowerPlan(powerPlanPower);
                     logInfoPp(powerPlanPower);
